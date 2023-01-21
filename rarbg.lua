@@ -7,11 +7,10 @@ local utils = require 'mp.utils'
 
 function find_subs()
     local path = mp.get_property("path", "")
-    local _, filename = utils.split_path(path)
-
+    local dir, filename = utils.split_path(path)
     filename = remove_extension(filename)
 
-    local subs_path = "./Subs/" .. filename .. "/"
+    local subs_path = dir .. "/Subs/" .. filename .. "/"
 
     if not utils.file_info(subs_path) then
         mp.msg.warn("No subs folder found.")
