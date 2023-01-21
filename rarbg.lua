@@ -1,6 +1,6 @@
 local language = {
     '2_English',
-    '38_Chinese'
+    'Chinese'
 }
 
 local utils = require 'mp.utils'
